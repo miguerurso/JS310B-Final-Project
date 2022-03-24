@@ -1,0 +1,1278 @@
+*{
+  margin: 0;
+  padding: 0;
+ }
+
+ body{
+  font-family: 'Raleway', sans-serif;
+ }
+
+ input{
+   width: 90%;
+   height: 30px;
+   margin-bottom: 10px;
+ }
+
+ .invalid{
+   background-color: rgba(255, 0, 0, 0.5);
+ }
+ .valid{
+  background-color: rgba(154, 255, 154,0.5);
+}
+#about-container{
+  border: white 3px solid;
+  border-radius: 15px;
+  position: relative;
+  margin: 0 auto;
+  color: white;
+  text-align: center;
+  background-color: rgb(82 55 150);
+  box-shadow: 1px 1px 5px rgb(89 89 89 / 75%);
+  padding: 1.5%;
+  text-decoration: none;
+  width: 700px;
+  height: auto;
+  margin: 0 auto;
+  font-size: 1em;
+  line-height: 2em;
+  font-weight: 600;
+  display: block;
+ }
+
+ .about-stats{
+   text-align: left;
+   line-height: 1.5em;
+   margin-bottom: 15px;
+ }
+
+ .description{
+  line-height: 1.5em;
+ }
+
+ #entry-form{
+  border: white 3px solid;
+  border-radius: 15px;
+  position: relative;
+  margin: 0 auto;
+  color: white;
+  text-align: center;
+  background-color: rgb(82 55 150);
+  box-shadow: 1px 1px 5px rgb(89 89 89 / 75%);
+  padding: 1.5%;
+  text-decoration: none;
+  width: 700px;
+  height: auto;
+  margin: 0 auto;
+  font-size: 1em;
+  line-height: 2em;
+  font-weight: 600;
+  display: block;
+ }
+
+ #entry-form .btn{
+  color: rgb(82 55 150);
+  text-align: center;
+  border: none;
+  background-color: white;
+  border-radius: 15px;
+  padding: 1.5%;
+  text-decoration: none;
+  margin: 0 auto;
+  font-size: 1.5em;
+  line-height: 2em;
+  font-weight: 600;
+  margin-top: 15px;
+  width: 40%;
+  height: 75px;
+ }
+
+ #start-game-btn{
+  color: rgb(82 55 150);
+  text-align: center;
+  border: none;
+  background-color: white;
+  border-radius: 15px;
+  padding: 1.5%;
+  text-decoration: none;
+  margin: 0 auto;
+  font-size: 1.5em;
+  line-height: 2em;
+  font-weight: 600;
+  margin-top: 15px;
+  width: 40%;
+  height: 75px;
+ }
+
+ #char-img-cont{
+  width: 40%;
+  margin-top: 5%;
+ }
+ #about-stats-container{
+  width: 52%;
+  position: relative;
+  margin-top: -42%;
+  margin: 1%;
+  margin-top: -42%;
+  padding-left: 41%;
+ }
+
+#game-container{
+  display: none;
+}
+ #background{
+  width: 1200px;
+  height: 700px;
+  position: relative;
+  margin: 20px auto;
+  background: url("https://migmarin.com/js-class-mm/game-bg.png");
+  background-position:center 0px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+ }
+ 
+ 
+ @keyframes jump {
+   from { bottom: -50px;  left: 0px; }
+   to { bottom: 400px; left: 100px; }
+ }
+ 
+ #hero-container{
+  width: 150px;
+  position: relative;
+  bottom: 10px;
+  right: 150px;
+ }
+ 
+ #beast-container{
+   width: 150px;
+   position: relative;
+   bottom: 150px;
+   left: 480px;
+    }
+ 
+ @keyframes idle-move {
+   from { transform: rotate(0deg); }
+   to { transform: rotate(2deg); }
+ }
+ 
+ #backarm{
+  position: absolute;
+  top: 412px;
+  left: 250px;
+  background-image: url("https://migmarin.com/js-class-mm/hero-pieces/backarm.png");
+  background-repeat: no-repeat;
+  height: 200px;
+  width: 150px;
+  animation-name: idle-move;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  -webkit-animation-name: idle-move;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+ }
+ 
+ 
+ #backleg{
+  position: absolute;
+  top: 407px;
+  left: 251px;
+  background-image: url("https://migmarin.com/js-class-mm/hero-pieces/backleg.png");
+  background-repeat: no-repeat;
+  height: 200px;
+  width: 150px;
+  animation-name: idle-move;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  -webkit-animation-name: idle-move;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+ }
+ 
+ #sword{
+   position: absolute;
+   top: 410px;
+   left: 250px;
+   background-image: url("https://migmarin.com/js-class-mm/hero-pieces/sword.png");
+   background-repeat: no-repeat;
+   height: 200px;
+     width: 260px;
+   animation-name: idle-move;
+   animation-duration: 1s;
+   animation-iteration-count: infinite;
+   animation-direction: alternate;
+   -webkit-animation-name: idle-move;
+   -webkit-animation-duration: 1s;
+   -webkit-animation-iteration-count: infinite;
+   -webkit-animation-direction: alternate;
+    }
+ 
+    #swordslash{
+   position: absolute;
+   top: 362px;
+   left: 250px;
+   background-image: url("https://migmarin.com/js-class-mm/hero-pieces/slash.png");
+   background-repeat: no-repeat;
+   height: 200px;
+     width: 260px;
+   opacity: 0;
+    }
+ 
+ 
+   
+    @keyframes slash { 
+   0%   { opacity:0; }
+   50%  { opacity:1; }
+   100% { opacity:0; }
+   }
+ 
+   @-webkit-keyframes slash{
+   0%   { opacity:0; }
+   50%  { opacity:1; }
+   100% { opacity:0; }
+   }
+   .slash-reveal{
+     animation: slash 1s forwards;
+   }
+ 
+ #body{
+  position: absolute;
+  top: 404px;
+  left: 251px;
+  background-image: url("https://migmarin.com/js-class-mm/hero-pieces/torso.png");
+  background-repeat: no-repeat;
+  height: 200px;
+  width: 150px;
+  animation-name: idle-move;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  -webkit-animation-name: idle-move;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+ }
+ 
+ #head{
+  position: absolute;
+  top: 410px;
+  left: 250px;
+  background-image: url("https://migmarin.com/js-class-mm/hero-pieces/head.png");
+  background-repeat: no-repeat;
+  height: 200px;
+  width: 150px;
+  animation-name: idle-move;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  -webkit-animation-name: idle-move;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+ }
+ 
+ #frontleg{
+  position: absolute;
+  top: 408px;
+  left: 249px;
+  background-image: url("https://migmarin.com/js-class-mm/hero-pieces/frontleg.png");
+  background-repeat: no-repeat;
+  height: 200px;
+  width: 150px;
+  animation-name: idle-move;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  -webkit-animation-name: idle-move;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+ }
+ #frontarm{
+  position: absolute;
+  top: 410px;
+  left: 250px;
+  background-image: url("https://migmarin.com/js-class-mm/hero-pieces/frontarm.png");
+  background-repeat: no-repeat;
+  height: 200px;
+  width: 150px;
+  animation-name: idle-move;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  -webkit-animation-name: idle-move;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+ }
+ 
+ 
+ #tail{
+   position: absolute;
+   top: 410px;
+   left: 250px;
+   background-image: url("https://migmarin.com/js-class-mm/beast-pieces/tail.png");
+   background-repeat: no-repeat;
+   height: 463px;
+     width: 418px;
+   animation-name: idle-move;
+   animation-duration: 1s;
+   animation-iteration-count: infinite;
+   animation-direction: alternate;
+   -webkit-animation-name: idle-move;
+   -webkit-animation-duration: 1s;
+   -webkit-animation-iteration-count: infinite;
+   -webkit-animation-direction: alternate;
+    }
+    
+    #beast-backlegs{
+   position: absolute;
+   top: 410px;
+   left: 250px;
+   background-image: url("https://migmarin.com/js-class-mm/beast-pieces/backlegs.png");
+   background-repeat: no-repeat;
+   height: 572px;
+     width: 335px;
+   animation-name: idle-move;
+   animation-duration: 1s;
+   animation-iteration-count: infinite;
+   animation-direction: alternate;
+   -webkit-animation-name: idle-move;
+   -webkit-animation-duration: 1s;
+   -webkit-animation-iteration-count: infinite;
+   -webkit-animation-direction: alternate;
+    }
+    
+       
+    #torso{
+   position: absolute;
+   top: 410px;
+   left: 250px;
+   background-image: url("https://migmarin.com/js-class-mm/beast-pieces/torso.png");
+   background-repeat: no-repeat;
+   height: 504px;
+     width: 403px;
+   animation-name: idle-move;
+   animation-duration: 1s;
+   animation-iteration-count: infinite;
+   animation-direction: alternate;
+   -webkit-animation-name: idle-move;
+   -webkit-animation-duration: 1s;
+   -webkit-animation-iteration-count: infinite;
+   -webkit-animation-direction: alternate;
+    }
+ 
+    #fronthindleg{
+   position: absolute;
+   top: 410px;
+   left: 250px;
+   background-image: url("https://migmarin.com/js-class-mm/beast-pieces/fronthindleg.png");
+   background-repeat: no-repeat;
+   height: 504px;
+     width: 403px;
+   animation-name: idle-move;
+   animation-duration: 1s;
+   animation-iteration-count: infinite;
+   animation-direction: alternate;
+   -webkit-animation-name: idle-move;
+   -webkit-animation-duration: 1s;
+   -webkit-animation-iteration-count: infinite;
+   -webkit-animation-direction: alternate;
+    }
+ 
+    
+    #frontmainleg{
+   position: absolute;
+   top: 410px;
+   left: 250px;
+   background-image: url("https://migmarin.com/js-class-mm/beast-pieces/frontmainleg.png");
+   background-repeat: no-repeat;
+   height: 504px;
+     width: 403px;
+   animation-name: idle-move;
+   animation-duration: 1s;
+   animation-iteration-count: infinite;
+   animation-direction: alternate;
+   -webkit-animation-name: idle-move;
+   -webkit-animation-duration: 1s;
+   -webkit-animation-iteration-count: infinite;
+   -webkit-animation-direction: alternate;
+    }
+    #beast-head{
+   position: absolute;
+   top: 410px;
+   left: 250px;
+   background-image: url("https://migmarin.com/js-class-mm/beast-pieces/head.png");
+   background-repeat: no-repeat;
+   height: 504px;
+     width: 403px;
+   animation-name: idle-move;
+   animation-duration: 1s;
+   animation-iteration-count: infinite;
+   animation-direction: alternate;
+   -webkit-animation-name: idle-move;
+   -webkit-animation-duration: 1s;
+   -webkit-animation-iteration-count: infinite;
+   -webkit-animation-direction: alternate;
+    }
+
+    #beastslash{
+      position: absolute;
+      top: 415px;
+      left: 151px;
+      background-image: url(https://migmarin.com/js-class-mm/beast-pieces/beast-slash.png);
+      background-repeat: no-repeat;
+      height: 434px;
+      width: 412px;
+      opacity: 0;
+    }
+    
+      #boom{
+      position: absolute;
+      top: 415px;
+      left: 151px;
+      background-image: url(https://migmarin.com/js-class-mm/beast-pieces/boom.png);
+      background-repeat: no-repeat;
+      height: 434px;
+      width: 412px;
+      opacity: 0;
+    }
+    
+
+    @-webkit-keyframes boom {
+      0% {
+        -webkit-transform: scale(0.1);
+        transform: scale(0.1);
+        -webkit-opacity: 0;
+        opacity: 0
+      }
+      80% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-opacity: 1;
+        opacity: 1;
+      }
+      100% {
+        -webkit-opacity: 0;
+        opacity: 0;
+      }
+    }
+    @keyframes boom {
+      0% {
+        -webkit-transform: scale(0.1);
+        transform: scale(0.1);
+        -webkit-opacity: 0;
+        opacity: 0
+      }
+      80% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-opacity: 1;
+        opacity: 1;
+      }
+      100% {
+        -webkit-opacity: 0;
+        opacity: 0;
+      }
+    }
+    
+    .boom {
+      -webkit-animation: boom 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) 3s both;
+              animation: boom 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) 3s both;
+    }
+
+    .grenade-boom {
+      -webkit-animation: boom 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+              animation: boom 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    }
+      
+      
+ 
+    @-webkit-keyframes hero-attack {
+   0% {
+     -webkit-transform: translateX(0);
+         transform: translateX(0);
+   }
+   100% {
+     -webkit-transform: translateX(450px);
+         transform: translateX(450px);
+   }
+   }
+   @keyframes hero-attack {
+   0% {
+     -webkit-transform: translateX(0);
+         transform: translateX(0);
+   }
+   100% {
+     -webkit-transform: translateX(450px);
+         transform: translateX(450px);
+   }
+   }
+
+   .hero-attack {
+    -webkit-animation: hero-attack 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) alternate backwards;
+            animation: hero-attack 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) alternate backwards;
+  }
+ 
+   
+   @-webkit-keyframes beast-attack {
+    0% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+    100% {
+      -webkit-transform: translateX(-450px);
+              transform: translateX(-450px);
+    }
+    }
+    @keyframes beast-attack {
+      0% {
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+      }
+      100% {
+        -webkit-transform: translateX(-450px);
+                transform: translateX(-450px);
+      }
+    }
+ 
+ .beast-attack {
+  -webkit-animation: beast-attack 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) alternate backwards;
+          animation: beast-attack 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) alternate backwards;
+}
+
+@-webkit-keyframes beast-defeat{
+  0% {
+    opacity: 1;
+  }
+  13.9% {
+    opacity: 1;
+  }
+  14% {
+    opacity: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  14.9% {
+    opacity: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  15% {
+    opacity: 1;
+  }
+  22.9% {
+    opacity: 1;
+  }
+  23% {
+    opacity: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  24.9% {
+    opacity: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  25% {
+    opacity: 1;
+  }
+  34.9% {
+    opacity: 1;
+  }
+  35% {
+    opacity: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  39.9% {
+    opacity: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  40% {
+    opacity: 1;
+  }
+  42.9% {
+    opacity: 1;
+  }
+  43% {
+    opacity: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  44.9% {
+    opacity: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  45% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  54.9% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  69.4% {
+    opacity: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  69.5% {
+    opacity: 1;
+  }
+  69.9% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  79.4% {
+    opacity: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  79.9% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  89.8% {
+    opacity: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  89.9% {
+    opacity: 1;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  90% {
+    opacity: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes beast-defeat{
+  0% {
+    opacity: 1;
+  }
+  13.9% {
+    opacity: 1;
+  }
+  14% {
+    opacity: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  14.9% {
+    opacity: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  15% {
+    opacity: 1;
+  }
+  22.9% {
+    opacity: 1;
+  }
+  23% {
+    opacity: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  24.9% {
+    opacity: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  25% {
+    opacity: 1;
+  }
+  34.9% {
+    opacity: 1;
+  }
+  35% {
+    opacity: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  39.9% {
+    opacity: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  40% {
+    opacity: 1;
+  }
+  42.9% {
+    opacity: 1;
+  }
+  43% {
+    opacity: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  44.9% {
+    opacity: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  45% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  54.9% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  69.4% {
+    opacity: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  69.5% {
+    opacity: 1;
+  }
+  69.9% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  79.4% {
+    opacity: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  79.9% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  89.8% {
+    opacity: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  89.9% {
+    opacity: 1;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  90% {
+    opacity: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+.beast-defeat{
+    -webkit-animation: beast-defeat 2s cubic-bezier(0.165, 0.840, 0.440, 1.000) both;
+            animation: beast-defeat 2s cubic-bezier(0.165, 0.840, 0.440, 1.000) both;
+}
+@-webkit-keyframes hero-defeat {
+  0% {
+    -webkit-transform: translateX(0);
+     transform: translateX(0);
+     -webkit-opacity: 1;
+     opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(-100px);
+    transform: translateX(-100px);
+     -webkit-opacity: 0;
+     opacity: 0;
+  }
+  }
+@keyframes hero-defeat {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    -webkit-opacity: 1;
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translateX(-100px);
+    transform: translateX(-100px);
+    -webkit-opacity: 0;
+    opacity: 0;
+  }
+}
+
+.hero-defeat{
+  -webkit-animation: hero-defeat 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: hero-defeat 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+
+@keyframes beast-slash { 
+  0%   { opacity:0; }
+  50%  { opacity:1; }
+  100% { opacity:0; }
+  }
+
+  @-webkit-keyframes beast-slash{
+  0%   { opacity:0; }
+  50%  { opacity:1; }
+  100% { opacity:0; }
+  }
+  .beast-slash-reveal{
+    animation:beast-slash 1s forwards;
+  }
+
+  .particle-1{
+    height: 8px;
+    width: 8px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    bottom: -570px;
+    left: 250px;
+    box-shadow:
+      0 0 40px 20px #fff,  
+      0 0 30px 40px rgb(254, 179, 239),
+      0 0 30px 40px rgb(252, 45, 152); 
+  }
+  
+  .particle-2{
+    height: 15px;
+    width: 15px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    bottom: -570px;
+    left: 350px;
+    box-shadow:
+      0 0 40px 20px #fff, 
+      0 0 30px 40px rgb(251, 251, 54), 
+      0 0 50px 50px rgb(252, 152, 45); 
+  }
+
+  .particle-3{
+    height: 10px;
+    width: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    bottom: -450px;
+    left: 400px;
+    box-shadow:
+      0 0 40px 20px #fff, 
+      0 0 30px 30px rgb(54, 231, 251), 
+      0 0 60px 60px rgb(45, 162, 252); 
+  }
+
+  @-webkit-keyframes primal-attack {
+    0% {
+      -webkit-transform: translateX(0) translateY(0);
+      transform: translateX(0) translateY(0);;
+      -webkit-opacity: 0;
+      opacity: 0;
+    }
+
+    50%{
+      -webkit-transform: translateX(0) translateY(-200px);
+      transform: translateX(0px) translateY(-200px);
+      -webkit-opacity: 1;
+      opacity: 1;
+      }
+
+    90% {
+      -webkit-transform: translateX(0px) translateY(-200px);
+      transform: translateX(0px) translateY(-200px);
+      -webkit-opacity: 1;
+      opacity: 1;
+    }
+    98% {
+      -webkit-transform: translateX(550px) translateY(-200px);
+      transform: translateX(550px) translateY(-200px);
+      -webkit-opacity: 1;
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: translateX(600px) translateY(-200px);
+      transform: translateX(600px) translateY(-200px);
+      -webkit-opacity: 0;
+      opacity: 0;
+    }
+    }
+
+    @keyframes primal-attack {
+      0% {
+        -webkit-transform: translateX(0) translateY(0);
+        transform: translateX(0) translateY(0);;
+        -webkit-opacity: 0;
+        opacity: 0;
+      }
+  
+      50%{
+        -webkit-transform: translateX(0) translateY(-200px);
+        transform: translateX(0px) translateY(-200px);
+        -webkit-opacity: 1;
+        opacity: 1;
+        }
+  
+      80% {
+        -webkit-transform: translateX(0px) translateY(-200px);
+        transform: translateX(0px) translateY(-200px);
+        -webkit-opacity: 1;
+        opacity: 1;
+      }
+      90% {
+        -webkit-transform: translateX(550px) translateY(-200px);
+        transform: translateX(550px) translateY(-200px);
+        -webkit-opacity: 1;
+        opacity: 1;
+      }
+      100% {
+        -webkit-transform: translateX(600px) translateY(-200px);
+        transform: translateX(600px) translateY(-200px);
+        -webkit-opacity: 0;
+        opacity: 0;
+      }
+      }
+
+      #primal-attack{
+        opacity: 0;
+        z-index: 10;
+      }
+  
+      .primal-attack{
+        -webkit-animation: primal-attack 3s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+        animation: primal-attack 3s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+      }
+
+      #text{
+          border: white 3px solid;
+          border-radius: 15px;
+          position: absolute;
+          left: 5%;
+          top: 10%;
+          color: white;
+          text-align: center;
+          background-color: rgb(82 55 150);
+          box-shadow: 1px 1px 5px rgb(89 89 89 / 75%);
+          font-size: 1em;
+          line-height: 2em;
+          font-weight: 600;
+          padding: 1.5%;
+          text-decoration: none;
+          opacity: 0;
+          width: 300px;
+      }
+
+      @-webkit-keyframes timer-fade-in {
+        0% {
+          opacity: 0;
+        }
+        90%{
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      @keyframes timer-fade-in {
+        0% {
+          opacity: 0;
+        }
+        90%{
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+
+      #timer{
+        border: white 3px solid;
+        border-radius: 15px;
+        position: absolute;
+        left: 4%;
+        top: 8%;
+        color: white;
+        text-align: center;
+        background-color: rgb(82 55 150);
+        box-shadow: 1px 1px 5px rgb(89 89 89 / 75%);
+        font-size: 1.35em;
+        line-height: 2em;
+        font-weight: 600;
+        padding: 2%;
+        text-decoration: none;
+        z-index: 1;
+        margin: 0 auto;
+        left: 45%;
+        opacity: 0;
+        -webkit-animation: timer-fade-in 1.25s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+        animation: timer-fade-in 1.25s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    }
+
+      #beast-stats{
+        border: white 3px solid;
+        border-radius: 15px;
+        position: absolute;
+        left: 65%;
+        top: 25%;
+        color: white;
+        text-align: center;
+        box-shadow: 1px 1px 5px rgb(89 89 89 / 75%);
+        font-size: 1em;
+        line-height: 2em;
+        font-weight: 600;
+        padding: 0.5%;
+        text-decoration: none;
+        width: 300px;
+    }
+
+      .disabled{
+        color: grey!important;
+        pointer-events: none;
+      }
+
+
+    #player-ui{
+        border: white 3px solid;
+        border-radius: 15px;
+        position: relative;
+        margin: 0 auto;
+        color: white;
+        text-align: center;
+        background-color: rgb(82 55 150);
+        box-shadow: 1px 1px 5px rgb(89 89 89 / 75%);
+        padding: 1.5%;
+        text-decoration: none;
+        width: 700px;
+        height: 150px;
+        margin: 0 auto;
+        font-size: 1.2em;
+        line-height: 2em;
+        font-weight: 600;
+        margin-top: -110px;
+        display: none;
+    }
+    #win-lose{
+      border: white 3px solid;
+      border-radius: 15px;
+      position: relative;
+      top: -725px;
+      margin: 0 auto;
+      color: white;
+      text-align: center;
+      background-color: rgb(82 55 150);
+      box-shadow: 1px 1px 5px rgb(89 89 89 / 75%);
+      padding: 1.5%;
+      text-decoration: none;
+      width: 700px;
+      height: 260px;
+      margin: 0 auto;
+      font-size: 3em;
+      line-height: 2em;
+      letter-spacing: 2px;
+      font-weight: 600;
+      line-height: 1.5em;
+      display: none;
+    }
+
+    #win-lose a button{
+      color: rgb(82 55 150);
+      text-align: center;
+      border: none;
+      background-color: white;
+      border-radius: 15px;
+      padding: 1.5%;
+      text-decoration: none;
+      margin: 0 auto;
+      font-size: 1em;
+      margin-top: 15px;
+      width: 48%;
+      font-size: 0.75em;
+      font-weight: 600;
+    }
+
+    #hero-stats{
+     float: right;
+     text-align: right;
+     width: 50%;
+    }
+    .hpAmt{
+      display: none;
+    }
+    #dynamic-stats{
+      border-left: white 3px solid;
+    }
+
+    #actions{
+      width: 50%;
+      text-align: left;
+     }
+
+     .ui-header{
+       font-weight: 600;
+       font-size: 1.25em;
+       padding-bottom: 5px;
+       border-bottom: 2px white solid;
+       margin-bottom: 10px;
+
+     }
+
+     #items-submenu{
+      margin-left: 5%;
+      font-weight: 500;
+      opacity: 0;
+     }
+
+     .item-info{
+      color: rgb(82 55 150);
+      text-align: left;
+      background-color: white;
+      border-radius: 15px;
+      padding: 1.5%;
+      text-decoration: none;
+      margin: 0 auto;
+      font-size: 0.75em;
+      line-height: 2em;
+      font-weight: 600;
+      position: absolute;
+      display: none;
+      top: 180px;
+      left: 200px;
+      opacity: 0.75;
+     }
+
+     #potion-usage{
+      position: absolute;
+      top: 362px;
+      left: 250px;
+      height: 200px;
+      width: 260px;
+      opacity: 0;
+      color: greenyellow;
+      font-weight: 700;
+      font-size: 5em;
+      }
+
+      #no-items{
+        display: none;
+      }
+
+      #hero-damage{
+        position: absolute;
+        top: 362px;
+        left: 250px;
+        height: 200px;
+        width: 260px;
+        opacity: 0;
+        color: red;
+        font-weight: 700;
+        font-size: 5em;
+        }
+
+        #beast-damage{
+          position: absolute;
+          top: 410px;
+          left: 390px;
+          height: 200px;
+          width: 260px;
+          opacity: 0;
+          color: red;
+          font-weight: 700;
+          font-size: 5em;
+          }
+    
+  
+
+
+      @-webkit-keyframes health-damage-animation{
+        0% {
+          -webkit-transform: translateY(0) scaleY(1) scaleX(1);
+              transform: translateY(0) scaleY(1) scaleX(1);
+          -webkit-transform-origin: 50% 0%;
+              transform-origin: 50% 0%;
+          -webkit-filter: blur(0);
+              filter: blur(0);
+          opacity: 1;
+        }
+        100% {
+          -webkit-transform: translateY(-1000px) scaleY(2) scaleX(0.2);
+              transform: translateY(-1000px) scaleY(2) scaleX(0.2);
+          -webkit-transform-origin: 50% 0%;
+              transform-origin: 50% 0%;
+          -webkit-filter: blur(40px);
+              filter: blur(40px);
+          opacity: 0;
+        }
+        }
+        @keyframes health-damage-animation{
+        0% {
+          -webkit-transform: translateY(0) scaleY(1) scaleX(1);
+              transform: translateY(0) scaleY(1) scaleX(1);
+          -webkit-transform-origin: 50% 0%;
+              transform-origin: 50% 0%;
+          -webkit-filter: blur(0);
+              filter: blur(0);
+          opacity: 1;
+        }
+        100% {
+          -webkit-transform: translateY(-1000px) scaleY(2) scaleX(0.2);
+              transform: translateY(-1000px) scaleY(2) scaleX(0.2);
+          -webkit-transform-origin: 50% 0%;
+              transform-origin: 50% 0%;
+          -webkit-filter: blur(40px);
+              filter: blur(40px);
+          opacity: 0;
+        }
+        }
+
+        .potion-use{
+          -webkit-animation: health-damage-animation 2s cubic-bezier(0.755, 0.050, 0.855, 0.060) alternate forwards;
+	        animation: health-damage-animation 2s cubic-bezier(0.755, 0.050, 0.855, 0.060) alternate forwards;
+        }
+
+        .hero-damage{
+          -webkit-animation: health-damage-animation 2s cubic-bezier(0.755, 0.050, 0.855, 0.060) alternate forwards;
+	        animation: health-damage-animation 2s cubic-bezier(0.755, 0.050, 0.855, 0.060) alternate forwards;
+        }
+
+        .beast-damage{
+          -webkit-animation: health-damage-animation 2s cubic-bezier(0.755, 0.050, 0.855, 0.060) alternate forwards;
+	        animation: health-damage-animation 2s cubic-bezier(0.755, 0.050, 0.855, 0.060) alternate forwards;
+        }
+

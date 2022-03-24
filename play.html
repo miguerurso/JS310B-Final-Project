@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<head>
+  <link rel="stylesheet" href="styles.css" type="text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,400&family=Raleway:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
+  <title>Bounty</title>
+</head>
+
+
+<body>
+
+  <form id="entry-form" class="form-visible">
+    <div class="form-group">
+      <label for="name">Enter Your Hero's Name</label>
+      <br/>
+      <input
+        id="name"
+        class="form-control validate-input"
+        type="text"
+        name="first-name"
+        required
+        
+      />
+      <small class="error" aria-live="polite"></small>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Enter Your Weapon's Name</label>
+      <br/>
+      <input
+        id="weapon"
+        class="form-control validate-input"
+        type="text"
+        name="weapon"
+        required
+      />
+      <small class="error" aria-live="polite"></small>
+    </div>
+    <div class="form-group">
+      <input class="btn btn-primary" id="form-btn" type="button" value="Let's go!" />
+    </div>
+  </form>
+
+  <div id="about-container">
+    <div class="ui-header">About Your Character</div>
+    <div id="char-img-cont">
+      <img id="char-img"></img>
+    </div>
+    <div id="about-stats-container"></div>
+    <button id="start-game-btn">Begin the Bounty!</button>
+  </div>
+
+  <!--START GAME-->
+  <div id="game-container">
+      <div id="timer"></div>
+
+      <div id="background">
+      <div id="text"></div>
+      <div id="beast-stats"></div>
+       <div id="hero-container">
+ 
+         <!--start hero-->
+         <div id="backarm"></div>
+         <div id="backleg"></div>
+         <div id="sword"></div>
+         <div id="frontleg"></div>
+         <div id="body"></div>
+         <div id="head"></div>
+         <div id="frontarm"></div>
+         <div id="swordslash"></div>
+         <div id ="primal-attack">
+          <div class="particle-1 slide-out-blurred-top-1"></div>
+          <div class="particle-2 slide-out-blurred-top-1"></div>
+          <div class="particle-3 slide-out-blurred-top-1"></div>
+        </div>
+        <div id="potion-usage"></div>
+        <div id="hero-damage"></div>
+ 
+       </div>
+ 
+       <div id="beast-container">
+ 
+        <!--start beast-->
+         <div id="tail"></div>
+         <div id="beast-backlegs"></div>
+         <div id="torso"></div>
+         <div id="fronthindleg"></div>
+         <div id="beastslash"></div>
+         <div id="frontmainleg"></div>
+         <div id="beast-head"></div>
+         <div id="boom"></div>
+         <div id="beast-damage"></div>
+       </div>
+ 
+      </div>
+ 
+  </div>
+ 
+ <div id="player-ui">
+
+  <div id="hero-stats">
+    <div class="ui-header" id="stats-header"></div>
+      <div id="dynamic-stats"></div>
+  </div>
+
+  <div id="actions">
+    <div class="ui-header" id="actions-header"></div>
+    <div id="attack-action">Attack</div>
+    <div id="primal-action">Primal Attack</div>
+    <div id="items-action">items
+      <div id="items-submenu">
+        <div id="grenade"><i>Grenade  x1</i>
+          <div class="item-info" id="grenade-info">A <i>Grenade</i> Deals 45 HP of Damage to Enemy</div>
+        </div>
+        <div id="potion"><i>Potion x1</i>
+          <div class="item-info" id="potion-info">A <i>Potion</i> Restores anywhere between 50 - 70 HP to Hero</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+ </div>
+
+
+ <div id="win-lose">
+   <div id="win-lose-result"></div>
+   <a id="start-over"><button id="start-over-btn">Start Over</button></a>
+   <a id="return-home" href="index.html"><button id="home">Return Home</button></a>
+ </div>
+ 
+<!--END GAME-->
+
+
+
+ <script src="script.js"></script>
+</body>
+
+</html>

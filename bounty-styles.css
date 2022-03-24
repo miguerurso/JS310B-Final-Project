@@ -1,0 +1,219 @@
+*{
+ margin: 0;
+ padding: 0;
+}
+
+
+body{
+	background: url("https://migmarin.com/js-class-mm/homepage-bg.png") no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.container{
+ margin: 0 auto;
+ font-family: 'Raleway', sans-serif;
+}
+
+
+#btn-row{
+	margin-top: 5%;
+}
+
+.a-btn{
+	border: white 3px solid;
+	border-radius: 15px;
+    position: relative;
+    margin: 0 auto;
+    color: white;
+    text-align: center;
+    letter-spacing: 4px;
+    background-color: rgb(82 55 150);
+    box-shadow: 1px 1px 5px rgb(89 89 89 / 75%);
+	font-size: 1.5em;
+	font-weight: 600;
+	margin: 0 5% 0 5%;
+	padding: 1.5%;
+	text-decoration: none;
+}
+
+.a-btn:hover{
+	color:chocolate;
+	border: chocolate 3px solid;
+}
+
+@-webkit-keyframes slide-out-blurred-top {
+	0% {
+	  -webkit-transform: translateY(0) scaleY(1) scaleX(1);
+			  transform: translateY(0) scaleY(1) scaleX(1);
+	  -webkit-transform-origin: 50% 0%;
+			  transform-origin: 50% 0%;
+	  -webkit-filter: blur(0);
+			  filter: blur(0);
+	  opacity: 1;
+	}
+	100% {
+	  -webkit-transform: translateY(-1000px) scaleY(2) scaleX(0.2);
+			  transform: translateY(-1000px) scaleY(2) scaleX(0.2);
+	  -webkit-transform-origin: 50% 0%;
+			  transform-origin: 50% 0%;
+	  -webkit-filter: blur(40px);
+			  filter: blur(40px);
+	  opacity: 0;
+	}
+  }
+  @keyframes slide-out-blurred-top {
+	0% {
+	  -webkit-transform: translateY(0) scaleY(1) scaleX(1);
+			  transform: translateY(0) scaleY(1) scaleX(1);
+	  -webkit-transform-origin: 50% 0%;
+			  transform-origin: 50% 0%;
+	  -webkit-filter: blur(0);
+			  filter: blur(0);
+	  opacity: 1;
+	}
+	100% {
+	  -webkit-transform: translateY(-1000px) scaleY(2) scaleX(0.2);
+			  transform: translateY(-1000px) scaleY(2) scaleX(0.2);
+	  -webkit-transform-origin: 50% 0%;
+			  transform-origin: 50% 0%;
+	  -webkit-filter: blur(40px);
+			  filter: blur(40px);
+	  opacity: 0;
+	}
+  }
+  
+
+.slide-out-blurred-top-1 {
+	-webkit-animation: slide-out-blurred-top 15s cubic-bezier(0.755, 0.050, 0.855, 0.060) infinite both;
+	        animation: slide-out-blurred-top 15s cubic-bezier(0.755, 0.050, 0.855, 0.060) infinite both;
+}
+
+.particle-1{
+	height: 8px;
+	width: 8px;
+	background-color: #fff;
+	border-radius: 50%;
+	display: inline-block;
+	position: absolute;
+	bottom: 10px;
+	box-shadow:
+    0 0 60px 30px #fff,  
+    0 0 100px 60px rgb(254, 179, 239),
+    0 0 140px 90px rgb(252, 45, 152); 
+	z-index: -10;
+}
+
+.particle-2{
+	height: 5px;
+	width: 5px;
+	background-color: #fff;
+	border-radius: 50%;
+	display: inline-block;
+	position: absolute;
+	bottom: 0px;
+	left: 30vw;
+	box-shadow:
+    0 0 60px 30px #fff, 
+    0 0 100px 60px rgb(254, 254, 179), 
+    0 0 140px 90px rgb(252, 152, 45); 
+	z-index: -10;
+}
+
+.particle-3{
+	height: 8px;
+	width: 8px;
+	background-color: #fff;
+	border-radius: 50%;
+	display: inline-block;
+	position: absolute;
+	bottom: 40px;
+	left: 70vw;
+	box-shadow:
+    0 0 10px 10px #fff,  
+    0 0 30px 30px rgb(254, 179, 239),
+    0 0 40px 40px rgb(252, 45, 152); 
+	z-index: -10;
+}
+
+.particle-4{
+	height: 8px;
+	width: 8px;
+	background-color: #fff;
+	border-radius: 50%;
+	display: inline-block;
+	position: absolute;
+	bottom: 25px;
+	left: 80vw;
+	box-shadow:
+    0 0 5px 5px #fff,  
+    0 0 10px 10px rgb(179, 240, 254),
+    0 0 20px 20px rgb(45, 180, 252);
+	z-index: -10;
+}
+
+.particle-5{
+	height: 8px;
+	width: 8px;
+	background-color: #fff;
+	border-radius: 50%;
+	display: inline-block;
+	position: absolute;
+	bottom: 40px;
+	left:95vw;
+	box-shadow:
+    0 0 60px 30px #fff,  
+    0 0 100px 60px rgb(254, 179, 239),
+    0 0 140px 90px rgb(252, 45, 152);
+	z-index: -10;
+}
+
+.secondary-page-logo{
+	display: flex;
+	justify-content: center;
+}
+.secondary-page-logo img{
+	width: 500px;
+	margin: 0 auto;
+	margin-bottom: 5%;
+}
+
+#story-paragraph{
+	font-size: 1.15em;
+	font-weight: 500;
+}
+
+#rules-paragraph{
+	font-size: 1.15em;
+	font-weight: 500;
+}
+.rules-copy{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.dropcap{
+  color: rgb(82 55 150);
+  padding: 0 .3rem;
+  margin: 0 .3rem 0 0;
+  border: 2px solid;
+  border-radius: 8px;
+
+  font-size: 4rem;
+  float: left;
+  line-height: 1;
+}
+.subheader{
+	color: rgb(82 55 150);
+	padding: 0.5rem;
+	margin: 0 .3rem 0 0;
+	border: 2px solid;
+	border-radius: 8px;
+	font-size: 1.5rem;
+	margin-bottom: 10px;
+	font-weight: 600;
+  }
+  
+
